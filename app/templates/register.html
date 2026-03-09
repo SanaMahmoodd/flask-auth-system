@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Create Account</h2>
+<p class="form-subtitle">Create your account to access the dashboard.</p>
+
+<form method="POST">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" placeholder="Enter your username">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+
+    <button type="submit">Register</button>
+</form>
+
+<div class="auth-footer">
+    Already have an account?
+    <a href="/login">Login</a>
+</div>
+{% endblock %}

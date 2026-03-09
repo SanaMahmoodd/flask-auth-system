@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-box">
+    <div class="dashboard-emoji">✨</div>
+    <h2>Dashboard</h2>
+    <p>Hello, <span class="welcome-name">{{ user.username }}</span></p>
+    <p>You are logged in successfully and this page is protected.</p>
+
+    <a href="/logout" class="logout-link">Logout</a>
+</div>
+{% endblock %}
