@@ -1,11 +1,16 @@
 # Flask Authentication System
 
-A modern **Flask authentication project** that demonstrates how to
-implement a complete user authentication flow using Flask and related
-libraries.
+A modern **Flask authentication project** that demonstrates how to implement a complete user authentication flow using Flask and related libraries.
 
 This project includes **user registration, login, logout, session
 management, password hashing, and a protected dashboard**.
+
+------------------------------------------------------------------------
+
+## Live Demo
+
+You can try the deployed application here:
+https://flask-auth-system-zfwm.onrender.com
 
 ------------------------------------------------------------------------
 
@@ -20,6 +25,8 @@ management, password hashing, and a protected dashboard**.
 -   Flash messages for user feedback
 -   Clean UI using **HTML, CSS, and Google Fonts**
 -   SQLite database using **SQLAlchemy**
+-   Environment variable management using python-dotenv
+-   Production-ready deployment with Gunicorn
 
 ------------------------------------------------------------------------
 
@@ -31,34 +38,52 @@ management, password hashing, and a protected dashboard**.
 -   Flask-SQLAlchemy
 -   Flask-Migrate
 -   SQLite
+-   Gunicorn
 -   HTML / CSS
 
 ------------------------------------------------------------------------
 
 ## Project Structure
 
-    flask_auth_app/
-    │
-    ├── app/
-    │   ├── __init__.py
-    │   ├── extensions.py
-    │   ├── models/
-    │   │   └── user.py
-    │   ├── routes/
-    │   │   ├── auth.py
-    │   │   └── main.py
-    │   ├── templates/
-    │   │   ├── base.html
-    │   │   ├── register.html
-    │   │   ├── login.html
-    │   │   └── dashboard.html
-    │   └── static/
-    │       └── style.css
-    │
-    ├── config.py
-    ├── run.py
-    ├── requirements.txt
-    └── README.md
+```
+flask_auth_app/
+│
+├── app/
+│   ├── __init__.py
+│   ├── extensions.py
+│   ├── models/
+│   │   └── user.py
+│   ├── routes/
+│   │   ├── auth.py
+│   │   └── main.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── register.html
+│   │   ├── login.html
+│   │   └── dashboard.html
+│   └── static/
+│       └── style.css
+│
+├── config.py
+├── run.py
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+ذذ
+------------------------------------------------------------------------
+
+## Environment Variables
+
+The application uses environment variables to store sensitive configuration.
+
+Example ```.env ``` file:
+
+```
+SECRET_KEY=your-secret-key
+DATABASE_URL=sqlite:///app.db
+FLASK_ENV_MODE=development
+```
 
 ------------------------------------------------------------------------
 
@@ -127,6 +152,19 @@ Then open your browser and go to:
 
 ------------------------------------------------------------------------
 
+## Deployment
+
+This project is deployed on Render using:
+
+- Gunicorn as the WSGI server
+- Environment variables for configuration
+- Automatic deployment from GitHub
+- Live deployment:
+```
+https://flask-auth-system-zfwm.onrender.com
+```
+------------------------------------------------------------------------
+
 ## Learning Purpose
 
 This project was built as part of a **Flask training Task** to
@@ -136,3 +174,5 @@ practice:
 -   Flask project structure
 -   Database integration
 -   Session management
+-   Environment variable management
+-   Application deployment
